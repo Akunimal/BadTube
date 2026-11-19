@@ -1,6 +1,19 @@
-# BadTube
+<p align="center">
+  <img src="assets/badtube_logo.jpg" alt="BadTube Logo" width="320" />
+</p>
 
-BadTube es un cliente nativo para Android de YouTube y YouTube Music enfocado en dispositivos móviles, con interfaz vertical (portrait), bloqueo integral de anuncios, reproducción en segundo plano y pantalla apagada, SponsorBlock y DeArrow integrados, y soporte para inicio de sesión en cuentas Google sin necesidad de root.
+<h1 align="center">BadTube</h1>
+
+<p align="center">
+  <strong>Cliente nativo para Android de YouTube y YouTube Music</strong><br>
+  Formato móvil vertical (portrait), bloqueo integral de anuncios, reproducción en segundo plano y pantalla apagada, SponsorBlock y DeArrow integrados, con soporte para inicio de sesión en cuentas Google sin root.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Akunimal/BadTube/releases/latest"><img src="https://img.shields.io/github/v/release/Akunimal/BadTube?style=for-the-badge&color=e50914" alt="Release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL%203.0-blue.svg?style=for-the-badge" alt="License"></a>
+  <img src="https://img.shields.io/badge/Platform-Android%208.0%2B-green?style=for-the-badge" alt="Platform">
+</p>
 
 ---
 
@@ -14,7 +27,7 @@ BadTube es un cliente nativo para Android de YouTube y YouTube Music enfocado en
 - **Controles Gestuales (Swipe Controls)**: Control de brillo y volumen deslizando sobre los costados de la pantalla en modo horizontal.
 - **Experiencia Móvil 100% Nativa**: Orientación vertical estándar, teclado táctil Android (IME) totalmente funcional, navegación nativa de Shorts y comentarios.
 - **Inicio de Sesión en Cuentas Google (Non-Root)**: Compatible con cuentas Google mediante [GmsCore / MicroG](https://github.com/ReVanced/GmsCore), sin requerir root en el dispositivo.
-- **Rebranding BadTube**: Identidad propia y limpia en la interfaz.
+- **Rebranding BadTube**: Identidad visual propia en la interfaz y lanzador de aplicaciones.
 
 ---
 
@@ -27,7 +40,7 @@ Para que BadTube pueda autenticar tu cuenta y gestionar streams de video sin dep
 3. Desactiva la optimización de batería para GmsCore si el sistema lo solicita.
 
 ### 2. Instalar BadTube
-1. Descarga la última versión de `BadTube-*.apk` desde la sección [Releases](https://github.com/Akunimal/BadTube/releases).
+1. Descarga la última versión de `BadTube-*.apk` desde la sección [Releases](https://github.com/Akunimal/BadTube/releases/latest).
 2. Abre el archivo APK e instálalo.
 3. Abre BadTube y disfruta de la experiencia sin anuncios.
 
@@ -35,7 +48,7 @@ Para que BadTube pueda autenticar tu cuenta y gestionar streams de video sin dep
 
 ## 🛠️ Compilación y Parcheo Local
 
-BadTube utiliza un pipeline determinista de inyección de bytecode (Dexlib2/Smali) sobre el APK base stock oficial compatible (ej. `20.05.46`).
+BadTube utiliza un pipeline determinista de inyección de bytecode (Dexlib2/Smali) sobre el APK base stock oficial compatible (`20.05.46`).
 
 ### Requisitos Previos
 - **Java JRE / JDK 17+**
@@ -58,7 +71,7 @@ python scripts/build.py
 El script se encarga de:
 1. Validar las dependencias locales y herramientas (`revanced-cli`, `patches.rvp`).
 2. Verificar el APK base compatible (`nodpi universal`).
-3. Aplicar el bundle de parches seleccionado (Adblock, Minimized playback, SponsorBlock, RYD, Rebranding, GmsCore support).
+3. Inyectar el bundle de parches y los iconos personalizados de BadTube.
 4. Alinear y firmar el APK final con esquemas V2 y V3.
 5. Dejar el APK compilado listo en `dist/BadTube-latest.apk`.
 
