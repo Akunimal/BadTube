@@ -1,0 +1,29 @@
+# Build and temporary files
+*.apk
+*.ap_
+*.dex
+*.class
+temp_*
+build/
+dist/
+*.log
+
+# Keystores & credentials
+*.keystore
+*.jks
+*.p12
+
+# Tools & caches
+tools/
+*.jar
+*.rvp
+*.mpp
+.gradle/
+build/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
